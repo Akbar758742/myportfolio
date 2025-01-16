@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,16 +16,16 @@
   </head>
   <body class="bg-[#000000f3] font-['Nunito']">
     <section
-      class="flex text-white flex-col justify-between h-screen sm:flex-wrap"
+      class="flex text-white flex-col justify-between h-screen sm:flex-wrap relative"
     >
       <header
-        class="z-10 pointer-events-none flex items-center justify-between w-full px-4 mt-4 max-w-screen-xl mx-auto"
+        class="z-10 pointer-events-none flex justify-items-center   justify-between w-full px-4 mt-4 max-w-screen-xl mx-auto"
       >
-        <div class="w-40 h-40">
-          <img class="w-3/4" src="assets/images/akbarlogo.png" alt="" />
+        <div class="w-40 h-40 mt-1">
+          <img class="w-1/2" src="assets/images/akbarlogo.png" alt="" />
         </div>
         <div
-          class="flex gap-4 pointer-events-auto hover:scale-110 ease-in-out duration-100"
+          class="flex gap-4 pointer-events-auto hover:scale-110 ease-in-out duration-100 mt-5"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -105,6 +105,16 @@
           </a>
         </div>
       </header>
+    
+    <a href="mailto:mdakbar758742@gmail.com" target="_blank">
+      <div class="absolute top-[180px] right-[60px] z-10"> <button
+        class="bg-[#4595eb] py-2 px-5 rounded font-extrabold bg-gradient-to-l from-[#1595b6] to-[#1f2667e6] relative hover:scale-110 ease-in-out duration-100 group"
+      >
+      Hire me
+  
+        
+      </button></div>
+    </a>
       <div class="absolute inset-0" id="wrapper-canvas"></div>
       <div class="flex -mt-10 relative">
         <div class="w-full px-4 max-w-screen-xl mx-auto">
@@ -240,7 +250,7 @@
       <div
         class="relative self-center after:content-[''] after:absolute after:w-[2px] after:h-5 after:bg-[#444] after:left-1/2 after:-translate-x-1/2 after:top-[100px]"
       >
-        <button
+        <a href="#project"><button
           class="bg-[#4595eb] py-2 px-5 rounded font-extrabold bg-gradient-to-l from-[#1595b6] to-[#1f2667e6] relative hover:scale-110 ease-in-out duration-100 group mb-20"
         >
           Latest Works
@@ -284,12 +294,12 @@
               />
             </g>
           </svg>
-        </button>
+        </button></a>
       </div>
     </section>
     <!-- project -->
-    <section
-      class="mx-6 my-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-items-center drop-shadow-[0_0px_60px_rgba(59,130,246,0.6)]"
+    <section id="project"
+      class="mx-6 my-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4  justify-items-center drop-shadow-[0_0px_60px_rgba(59,130,246,0.6)]"
     >
       <div
         class="w-[300px] h-[400px] bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 p-2 hover:scale-110 ease-in-out duration-100"
@@ -496,7 +506,7 @@
       </div>
     </section>
     <!-- form -->
-    <section class="mx-auto px-4 pb-12 max-w-screen-xl">
+    <section id="contact" class="mx-auto px-4 pb-12 max-w-screen-xl">
       <div
         class="flex justify-center items-center py-2 px-5 rounded font-extrabold bg-gradient-to-l from-[#57d4f0] to-[#eeeb5948] relative mb-4"
       >
