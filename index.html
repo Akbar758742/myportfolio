@@ -13,6 +13,24 @@
       type="image/x-icon"
     />
     <script src="./matter.js" defer></script>
+    <script>
+      function toggleTooltip() {
+        const tooltip = document.getElementById("tooltip-section");
+        if (tooltip.classList.contains("hidden")) {
+          tooltip.classList.remove("hidden");
+          setTimeout(() => {
+            tooltip.classList.add("opacity-100", "scale-100");
+            tooltip.classList.remove("opacity-0", "scale-90");
+          }, 10);
+        } else {
+          tooltip.classList.add("opacity-0", "scale-90");
+          tooltip.classList.remove("opacity-100", "scale-100");
+          setTimeout(() => {
+            tooltip.classList.add("hidden");
+          }, 300); // Match duration of the transition
+        }
+      }
+    </script>
   </head>
   <body class="bg-[#000000f3] font-['Nunito']">
     <section
@@ -135,7 +153,123 @@
             >
               Frontend Developer
             </p>
-            <button
+             <!-- about section -->
+    <div id="tooltip-section"
+    class="bg-gray-900 flex p-2    text-white flex-col w-[240px] absolute -top-[200px]  right-0 left-0  scale-90 transition-all duration-300 ease-[cubic-bezier(0.68,-0.55,0.265,1.55)] z-50 hidden opacity-0 rounded-lg h-[600px] sm:w-3/4"
+  >
+
+   
+    <div class="w-full mb-8 ">
+      <!-- Cross Bar -->
+      <div
+      class="flex justify-between items-center bg-gray-800 px-4 py-2 rounded-t-lg"
+    >
+      <span class="font-bold text-lg">About Me</span>
+      <button
+        onclick="toggleTooltip()"
+        class="text-white bg-red-500 px-2 py-1 rounded hover:bg-red-600"
+      >
+        X
+      </button>
+    </div>
+
+      <p class="text-sm mt-4">
+        I help business owners and busy web developers to design & develop
+        creative websites that fits their vision and attracts the visitors to
+        stay for ever. Technologies and tools that I use to create such
+        awesome websites.
+        <ul class="flex flex-wrap gap-2 mt-4">
+          <li class="text-[#1788AE] border rounded-[20px] px-[10px] py-[5px] text-sm md:text-base ">html</li>
+          <li class="text-[#1788AE] border rounded-[20px] px-[10px] py-[5px] text-sm md:text-base ">css</li>
+          <li class="text-[#1788AE] border rounded-[20px] px-[10px] py-[5px] text-sm md:text-base ">tailwindcss</li>
+          <li class="text-[#1788AE] border rounded-[20px] px-[10px] py-[5px] text-sm md:text-base ">javascript</li>
+          
+        </ul>
+      </p>
+      
+    </div>
+   <h3  class="text-2xl font-bold text-[#1788AE]w-3/4">Technologies</h3>
+    <div
+      class=" w-3/4 rounded-[19px] flex items-center p-2 sm:px-4 pl-0"
+    >
+
+      <!-- MongoDB Tooltip -->
+      <div
+        class="flex flex-col items-center gap-5 font-bold text-3xl relative group mongodb"
+      >
+        <img
+          src="assets/icons/html-5-svgrepo-com.svg"
+          alt="mongodb"
+          class="relative w-12 z-10"
+        />
+
+        <div
+          class="absolute top-4 opacity-0 group-hover:top-[-48px] group-hover:opacity-100 bg-[#47a248] text-white text-sm py-2 px-4 rounded-[24px] transition-all duration-300 ease-[cubic-bezier(0.68,-0.55,0.265,1.55)]"
+        >
+          <span>HTML</span>
+          <div
+            class="absolute h-4 w-4 bg-inherit rotate-45 translate-x-[-50%] left-1/2 bottom-[-12px]"
+          ></div>
+        </div>
+      </div>
+
+      <!-- Express.js Tooltip -->
+      <div
+        class="flex flex-col items-center gap-5 font-bold text-3xl relative group express"
+      >
+        <div
+          class="absolute top-4 opacity-0 group-hover:top-[-48px] group-hover:opacity-100 bg-white text-black text-sm py-2 px-4 rounded-[24px] transition-all duration-300 ease-[cubic-bezier(0.68,-0.55,0.265,1.55)]"
+        >
+          <span>css</span>
+          <div
+            class="absolute h-4 w-4 bg-inherit rotate-45 translate-x-[-50%] left-1/2 bottom-[-12px]"
+          ></div>
+        </div>
+        <img
+          src="assets/icons/css-3-svgrepo-com.svg"
+          alt="express"
+          class="relative z-10 w-12"
+        />
+      </div>
+
+      <!-- React.js Tooltip -->
+      <div
+        class="flex flex-col items-center gap-5 font-bold text-3xl relative group react"
+      >
+        <img
+          src="assets/icons/tailwindcss-icon-svgrepo-com.svg"
+          alt="react"
+          class="relative w-12 z-10"
+        />
+
+        <div
+          class="absolute top-4 opacity-0 group-hover:top-[-48px] group-hover:opacity-100 bg-[#61dafb] text-white text-sm py-2 px-4 rounded-[24px] transition-all duration-300 ease-[cubic-bezier(0.68,-0.55,0.265,1.55)]"
+        >
+          <span>tailwindcss</span>
+          <div
+            class="absolute h-4 w-4 bg-inherit rotate-45 translate-x-[-50%] left-1/2 bottom-[-12px]"
+          ></div>
+        </div>
+      </div>
+
+      <!-- Node.js Tooltip -->
+      <div
+        class="flex flex-col items-center gap-5 font-bold text-3xl relative group node"
+      >
+        <img src="assets/icons/react-javascript-js-framework-facebook-svgrepo-com.svg" alt="node" class="relative w-12 z-10" />
+
+        <div
+          class="absolute top-4 opacity-0 group-hover:top-[-48px] group-hover:opacity-100 bg-[#8cc84b] text-white text-sm py-2 px-4 rounded-[24px] transition-all duration-300 ease-[cubic-bezier(0.68,-0.55,0.265,1.55)]"
+        >
+          <span>React</span>
+          <div
+            class="absolute h-4 w-4 bg-inherit rotate-45 translate-x-[-50%] left-1/2 bottom-[-12px]"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </div>
+            <button onclick="toggleTooltip()"
               class="bg-[#4595eb] py-2 px-5 rounded font-extrabold bg-gradient-to-l from-[#1595b6] to-[#1f2667e6] relative hover:scale-110 ease-in-out duration-100 group"
             >
               About Me
